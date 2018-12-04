@@ -1,14 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "holberton.h"
-
-/**
-*
-*
-*/
-
-()
-{
-
-	return (0);
-}
+#!/usr/bin/python3
+number = 3.14159
+print("Float: {:.2f}".format(number))
