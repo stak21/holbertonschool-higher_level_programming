@@ -1,14 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "holberton.h"
-
-/**
-*
-*
-*/
-
-()
-{
-
-	return (0);
-}
+#!/usr/bin/python3
+import sys
+str = "and that piece of art is useful - Dora Korpar, 2015-10-19\n"
+sys.stderr.write(str)
