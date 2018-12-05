@@ -35,8 +35,6 @@ listint_t *insert_node(listint_t **head, int number)
 	}
 
 	nxt_ptr = *head;
-	if (nxt_ptr == NULL)
-
 	while (nxt_ptr != NULL && nxt_ptr->n <= number)
 	{
 		prev_ptr = nxt_ptr;
