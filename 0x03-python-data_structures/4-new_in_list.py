@@ -4,4 +4,6 @@ def new_in_list(my_list, idx, element):
         return None
     if idx < 0 or idx >= len(my_list):
         return None
-    return my_list[:idx] + [element] + my_list[idx + 1:]
+    copy = my_list.copy()
+    copy[idx] = element
+    return copy
