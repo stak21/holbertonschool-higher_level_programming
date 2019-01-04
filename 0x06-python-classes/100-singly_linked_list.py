@@ -27,7 +27,7 @@ class Node:
         if value is None or type(value) is type(self):
             self.__next_node = value
         else:
-            raise TypeError("next_node must be an integer")
+            raise TypeError("next_node must be a Node object")
 
 
 class SinglyLinkedList:
