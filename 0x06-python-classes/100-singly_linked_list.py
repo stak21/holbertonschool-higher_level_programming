@@ -38,9 +38,9 @@ class SinglyLinkedList:
     def __repr__(self):
         ret_str = ""
         while self.__head is not None:
-            ret_str += str(self.__head.data) + "\n"
+            ret_str += str(self.__head.data) + '\n'
             self.__head = self.__head.next_node
-        return ret_str
+        return ret_str[0:-1]
 
     def sorted_insert(self, value):
         cur = self.__head
