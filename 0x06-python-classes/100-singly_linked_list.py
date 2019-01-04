@@ -38,7 +38,6 @@ class SinglyLinkedList:
     def __repr__(self):
         ret_str = ""
         cur = self.__head
-        if
         while self.__head is not None:
             ret_str += str(self.__head.data) + '\n'
             self.__head = self.__head.next_node
@@ -53,9 +52,6 @@ class SinglyLinkedList:
             self.__head = Node(value)
             return
 
-        if self.__head.next_node is None:
-            self.__head.next_node = Node(value, None)
-            return
         if self.__head.data > value:
             self.__head = Node(value, self.__head)
             return
