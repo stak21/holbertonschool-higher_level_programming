@@ -45,6 +45,8 @@ class SinglyLinkedList:
         return ret_str[0:-1]
 
     def sorted_insert(self, value):
+        if type(value) is not int:
+            raise TypeError("data must be an integer")
         cur = self.__head
         if self.__head is None:
             self.__head = Node(value)
