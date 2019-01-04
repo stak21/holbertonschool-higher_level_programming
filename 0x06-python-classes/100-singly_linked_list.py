@@ -25,6 +25,7 @@ class Node:
     @next_node.setter
     def next_node(self, value):
         if value is None or type(value) is type(self):
+            print(type(self))
             self.__next_node = value
         else:
             raise TypeError("next_node must be an integer")
