@@ -10,7 +10,7 @@ class Square:
 
     def __repr__(self):
         ret_str = ""
-        if self.size < 0:
+        if self.size <= 0:
             return ret_str
         elif self.position[1] > 0:
             for newline in range(self.position[1]):
