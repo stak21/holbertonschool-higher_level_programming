@@ -14,8 +14,8 @@ class TestMaxInteger(unittest.TestCase):
 
     def testFail(self):
         """ Test a failing case """
-        max_integer(['f', 3])
-        raise TypeError
+        with self.assertRaises(TypeError):
+            max_integer(['f', 3])
     
     def testString(self):
         """ Test a string """
