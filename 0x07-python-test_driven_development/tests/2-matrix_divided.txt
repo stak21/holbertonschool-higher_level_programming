@@ -65,7 +65,7 @@ TypeError: Must be a matrix
 >>> matrix_divided(matrix, 1)
 Traceback (most recent call last):
 ...
-TypeError: Matrix must have atleast 2 lists
+TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 """
 """ Make sure the return value is a new matrix """
@@ -74,3 +74,15 @@ TypeError: Matrix must have atleast 2 lists
 >>> if new_matrix == matrix:
 ...		print("False")
 False
+
+"""
+""" Empty list """
+>>> matrix_divided([[]], 1)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+"""
+""" Empty list """
+>>> matrix_divided([[], []], 1)
+[[], []]
