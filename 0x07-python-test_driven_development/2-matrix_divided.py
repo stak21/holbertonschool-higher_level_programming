@@ -6,7 +6,8 @@ def matrix_divided(matrix, div):
     if not isinstance(matrix, list):
         raise TypeError("Must be a matrix")
     elif len(matrix) == 1:
-        raise TypeError("Matrix must have atleast 2 lists")
+        raise TypeError("matrix must be a matrix (list of lists) of \
+integers/floats")
     elif len(matrix[0]) != len(matrix[1]):
         raise TypeError("Each row of the matrix must have the same size div")
     elif not all(type(val) is int or type(val) is float for val in matrix[0]):
