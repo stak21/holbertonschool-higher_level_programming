@@ -1,0 +1,28 @@
+#doctest: 3-say_my_name
+""" TDD: Test a function that prints a string with first name and last name """
+
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+""" First name only """
+>>> say_my_name("shoji")
+My name is shoji
+
+"""
+""" Normal case: first and last name """
+>>> say_my_name("shoji", "takashima")
+My name is shoji takashima
+
+"""
+""" Error case: first name is not a string """
+>>> say_my_name(2)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+"""
+""" ErrorCase: last name is not a string """
+>>> say_my_name('shoji', 2)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+"""

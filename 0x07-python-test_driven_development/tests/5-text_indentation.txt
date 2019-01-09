@@ -1,0 +1,37 @@
+#Doctest: 5-text_indentation
+""" TDD: Tests for a function that prints newlines after '.?:' characters """
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+""" Check if text is a string """
+>>> text_indentation(2)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+"""
+""" check if there is a space at the beginning or end of each printed line """
+>>> text_indentation(" hello")
+hello
+
+"""
+""" Check if it works properly """
+>>> text_indentation(" haro. My friend is here: together? we are here") 
+haro.
+<BLANKLINE>
+My friend is here:
+<BLANKLINE>
+together?
+<BLANKLINE>
+we are here
+
+"""
+""" given example """
+>>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
+Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? \
+Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: \
+Plus semper voluptatis? Teneo, inquit, finem illi videri nihil dolere. \
+Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum \
+rationi oboediens. Si id dicis, vicimus. Inde sermone vario sex illa a Dipylo \
+stadia confecimus. Sin aliud quid voles, postea. Quae animi affectio suum \
+cuique tribuens atque hanc, quam dico. Utinam quidem dicerent alium alio \
+beatiorem! Iam ruinas videres""")
