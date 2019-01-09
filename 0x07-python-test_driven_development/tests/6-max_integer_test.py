@@ -15,4 +15,14 @@ class TestMaxInteger(unittest.TestCase):
     def testFail(self):
         """ Test a failing case """
         max_integer(['f', 3])
-        raise ValueError("list must be a list of integers")
+        raise TypeError
+    
+    def testString(self):
+        """ Test a string """
+        self.assertEqual(max_integer('ddw'), 'w')
+
+    def testListString(self):
+        """ Test a list of strings """
+        self.assertEqual(max_integer(['hi', 'bye']), 'hi')
+
+
