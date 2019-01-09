@@ -66,3 +66,11 @@ TypeError: Must be a matrix
 Traceback (most recent call last):
 ...
 TypeError: Matrix must have atleast 2 lists
+
+"""
+""" Make sure the return value is a new matrix """
+>>> matrix = [[1],[2]]
+>>> new_matrix = matrix_divided(matrix, 1)
+>>> if new_matrix == matrix:
+...		print("False")
+False
