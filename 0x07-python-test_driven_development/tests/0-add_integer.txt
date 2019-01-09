@@ -1,0 +1,38 @@
+#doctest-0_add.py
+""" Attempting to test doing TDD to add 2 integers """
+
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> print(add_integer(1, 2))
+3
+
+>>> add_integer(0, 2)
+2
+
+>>> add_integer(1)
+99
+
+>>> add_integer(-1)
+97
+
+>>> add_integer(-1, 99)
+98
+
+>>> add_integer(1.11)
+99
+
+>>> add_integer()
+Traceback (most recent call last):
+...
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+>>> add_integer('j')
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(1, 'j')
+Traceback (most recent call last):
+...
+TypeError: b must be an integer

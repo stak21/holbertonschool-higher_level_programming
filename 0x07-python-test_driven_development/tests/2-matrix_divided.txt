@@ -1,0 +1,68 @@
+#2-matrix_divided
+""" TDD: Divide all elements of a matrix """
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+""" Checking if matrix's values are integer or float """
+>>> matrix = [['d'],[2]]
+>>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+"""
+
+""" Checking if the rows are the same size """
+>>> matrix = [[2], [3, 5]]
+>>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size div
+
+""" 
+""" Check if div is a number """
+>>> matrix = [[2],[3]]
+>>> matrix_divided(matrix, 'f')
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+"""
+""" Check if div is a 0 """
+>>> matrix = [[2],[2]]
+>>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
+
+"""
+""" To see if the returned values are 2 decimal places """
+>>> matrix = [[1,2,3],[4,5,6]]
+>>> print(matrix_divided(matrix, 3))
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+""" Check if its a matrix """
+>>> matrix = 'j'
+>>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
+TypeError: Must be a matrix
+
+"""
+""" Test more than 2 lists """
+>>> matrix = [[1,2,3], [2,3,4], [4,5,6]]
+>>> matrix_divided(matrix, 1)
+[[1.0, 2.0, 3.0], [2.0, 3.0, 4.0], [4.0, 5.0, 6.0]]
+
+"""
+""" Set div to -1 """
+>>> matrix = [[1,2,3,], [2,3,4]]
+>>> matrix_divided(matrix, -1)
+[[-1.0, -2.0, -3.0], [-2.0, -3.0, -4.0]]
+
+"""
+""" Matrix only contains one list """
+>>> matrix = [[1,2,3]]
+>>> matrix_divided(matrix, 1)
+Traceback (most recent call last):
+...
+TypeError: Matrix must have atleast 2 lists
