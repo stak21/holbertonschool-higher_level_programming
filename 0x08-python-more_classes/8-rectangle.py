@@ -20,7 +20,8 @@ class Rectangle:
             return rep
         for row in range(self.height):
             rep += str(self.print_symbol) * self.width
-            rep += "\n"
+            if row != self.height:
+                rep += "\n"
         return rep
 
     def __repr__(self):
