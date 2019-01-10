@@ -4,7 +4,7 @@
 
 class Rectangle:
     """ build upon a previous project: methods(area, perimeter) """
-    def __init__(self, width, height):
+    def __init__(self, width=0, height=0):
         """ initiate fields """
         self.height = height
         self.width = width
