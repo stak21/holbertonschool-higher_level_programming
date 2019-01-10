@@ -86,3 +86,8 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 """ Empty list """
 >>> matrix_divided([[], []], 1)
 [[], []]
+
+"""
+""" tests 1 value """
+>>> matrix_divided([[3]], 3)
+[[1.0]]

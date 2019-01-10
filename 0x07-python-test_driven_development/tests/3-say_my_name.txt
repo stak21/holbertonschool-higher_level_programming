@@ -6,7 +6,7 @@
 
 """ First name only """
 >>> say_my_name("shoji")
-My name is shoji
+My name is shoji 
 
 """
 """ Normal case: first and last name """
