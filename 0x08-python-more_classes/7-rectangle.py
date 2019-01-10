@@ -3,11 +3,11 @@
 
 
 class Rectangle:
-    """ build upon the previous project: method(del) """
+    """ build upon the previous project: class_field(symbol) """
     number_of_instances = 0
     print_symbol = '#'
 
-    def __init__(self, width, height):
+    def __init__(self, width=0, height=0):
         """ initiates fields """
         self.height = height
         self.width = width
@@ -20,7 +20,8 @@ class Rectangle:
             return rep
         for row in range(self.height):
             rep += str(self.print_symbol) * self.width
-            rep += "\n"
+            if row != self.height - 1:
+                rep += "\n"
         return rep
 
     def __repr__(self):
