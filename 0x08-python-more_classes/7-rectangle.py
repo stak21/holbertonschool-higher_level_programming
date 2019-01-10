@@ -4,8 +4,6 @@
 
 class Rectangle:
     """ build upon the previous project: method(del) """
-
-    
     number_of_instances = 0
     print_symbol = '#'
 
@@ -19,12 +17,12 @@ class Rectangle:
         """ returns the rectangle """
         rep = ""
         if not self.area():
-           return rep 
+            return rep
         for row in range(self.height):
             rep += str(self.print_symbol) * self.width
             rep += "\n"
         return rep
-    
+
     def __repr__(self):
         """ return a string representation of the rectangle """
         return "Rectangle({}, {})".format(self.width, self.height)

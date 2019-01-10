@@ -4,8 +4,6 @@
 
 class Rectangle:
     """ build upon the previous project: method(repr) """
-
-
     def __init__(self, width, height):
         """ initiates fields """
         self.height = height
@@ -15,12 +13,12 @@ class Rectangle:
         """ returns the rectangle """
         rep = ""
         if not self.area():
-           return rep 
+            return rep
         for row in range(self.height):
             rep += "#" * self.width
             rep += "\n"
         return rep
-    
+
     def __repr__(self):
         """ return a string representation of the rectangle """
         return "Rectangle({}, {})".format(self.width, self.height)

@@ -13,7 +13,7 @@ class Rectangle:
         """ return a string representation of the rectangle """
         rep = ""
         if not self.area():
-           return rep 
+            return rep
         for row in range(self.height):
             rep += "#" * self.width
             rep += "\n"
@@ -50,10 +50,9 @@ class Rectangle:
     def area(self):
         """ returns the area of a rectangle """
         return self.width * self.height
-    
+
     def perimeter(self):
         """ returns the perimeter of a rectangle """
         if self.height is 0 or self.width is 0:
             return 0
         return (2 * self.width) + (2 * self. height)
-
