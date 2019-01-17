@@ -1,0 +1,21 @@
+#docTest 1-print_sorted
+""" Test for printing a sorted list """
+
+>>> MyList = __import__('1-my_list').MyList
+
+""" simple test - append and print a list"""
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> print(my_list)
+[1]
+ 
+ """
+ """ print a sorted list """
+ >>> my_list = MyList()
+ >>> my_list.append(2)
+ >>> my_list.append(5)
+ >>> my_list.append(1)
+ >>> my_list.print_sorted()
+ [1, 2, 5]
+
+"""
