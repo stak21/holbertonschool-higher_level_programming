@@ -5,5 +5,4 @@ import json
 
 def class_to_json(obj):
     """ Returns the dictionary description with simple data structure """
-    dic = json.dumps(obj.__dict__)
-    return json.loads(dic)
+    return obj.__dict__
