@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import json
 """ Function: class_to_json """
 
 
