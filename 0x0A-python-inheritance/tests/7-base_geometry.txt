@@ -29,3 +29,49 @@ Traceback (most recent call last):
 TypeError: non_int must be an integer
 
 """
+""" Test one argument """
+>>> bg.integer_validator("age")
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+"""
+""" Test None """
+>>> bg.integer_validator("age", None)
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+"""
+""" Test set """
+bg.integer_validator("age", {3, 4})
+
+"""
+""" Test Boolean """
+>>> bg.integer_validator("age", True)
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+"""
+""" Test list """
+>>> bg.integer_validator("age", [2])
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+"""
+""" Test tuple """
+>>> bg.integer_validator("age", (2,))
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+"""
+""" Test  String """
+>>> bg.integer_validator("age", '4')
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+"""
