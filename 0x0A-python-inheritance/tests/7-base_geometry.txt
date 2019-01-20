@@ -1,0 +1,31 @@
+#Doctest: integer_validator
+""" Test for printing a validating an integer"""
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+""" Test if given input is an integer """
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("my_int", 12)
+
+"""
+""" Test a negative number """
+>>> bg.integer_validator("negative_int", -1)
+Traceback (most recent call last):
+...
+ValueError: negative_int must be greater than 0
+
+"""
+""" Test 0 """
+>>> bg.integer_validator("zero_int", 0)
+Traceback (most recent call last):
+...
+ValueError: zero_int must be greater than 0
+
+"""
+""" Test non_integer """
+>>> bg.integer_validator("non_int", 'f')
+Traceback (most recent call last):
+...
+TypeError: non_int must be an integer
+
+"""
