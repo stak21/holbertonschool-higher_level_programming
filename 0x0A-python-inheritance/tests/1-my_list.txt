@@ -27,10 +27,18 @@
 """
 """ check if the original is modified """
 >>> my_list = MyList()
- >>> my_list.append(2)
- >>> my_list.append(5)
- >>> my_list.append(1)
+>>> my_list.append(2)
+>>> my_list.append(5)
+>>> my_list.append(1)
+>>> my_list.print_sorted()
+[1, 2, 5]
+>>> print(my_list)
+[2, 5, 1]
+
+ """
+ """ check sorted append with negative number """
+ >>> my_list = MyList()
+ >>> my_list.append(-1)
+ >>> my_list.append(-5)
  >>> my_list.print_sorted()
- [1, 2, 5]
- >>> print(my_list)
- [2, 5, 1]
+ [-5, -1]
