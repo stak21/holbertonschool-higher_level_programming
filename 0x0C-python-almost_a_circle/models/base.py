@@ -23,7 +23,7 @@ class Base:
     def load_from_file(cls):
         """ Retrieve the json formatted dictionary from a file and recreate it
         """
-        filename = cls.class_name + ".json"
+        filename = "{}.json".format(cls.__name__)
         with open(filename, "r", encoding="utf-8") as f:
             data = f.read()
         input_li = Base.from_json_string(data)
