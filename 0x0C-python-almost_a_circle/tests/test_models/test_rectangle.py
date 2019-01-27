@@ -14,14 +14,15 @@ class TestRectangle(unittest.TestCase):
     def test_parent(self):
         self.rec = Rectangle(1, 2)
         self.assertTrue(isinstance(self.rec, Base))
+        self.assertTrue(issubclass(Rectangle, Base))
         self.assertEqual(self.rec.id, 1)
-        self.rec = Rectangle(1,2)
-        self.rec = Rectangle(1,2)
-        self.rec = Rectangle(1,2)
+        self.rec = Rectangle(1, 2)
+        self.rec = Rectangle(1, 2)
+        self.rec = Rectangle(1, 2)
         self.assertEqual(self.rec.id, 4)
 
     def test_init(self):
-        """ test all values """ 
+        """ test all values """
         self.rec = Rectangle(1, 2, 3, 4, 10)
         self.assertEqual(self.rec.width, 1)
         self.assertEqual(self.rec.height, 2)
@@ -35,13 +36,6 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(self.rec.y, 0)
         self.assertEqual(self.rec.id, 1)
 
-    def test_etc(self):
-        """ Test missing arguments """
-        with self.assertRaises(TypeError):
-            self.rec = Rectangle(1)
-        with self.assertRaises(TypeError):
-            self.rec = Rectangle()
-            
     def test_bad_types(self):
         """ Test bad width types """
         with self.assertRaises(TypeError):
@@ -51,7 +45,7 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             self.rec = Rectangle([3], 1)
         with self.assertRaises(TypeError):
-            self.rec = Rectangle({2:2}, 1)
+            self.rec = Rectangle({2: 2}, 1)
         with self.assertRaises(TypeError):
             self.rec = Rectangle((2,), 1)
         """ Test bad height types """
@@ -62,7 +56,7 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             self.rec = Rectangle(1, [3])
         with self.assertRaises(TypeError):
-            self.rec = Rectangle(1, {2:2})
+            self.rec = Rectangle(1, {2: 2})
         with self.assertRaises(TypeError):
             self.rec = Rectangle(1, (2,))
         """ Test bad x types """
@@ -73,7 +67,7 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             self.rec = Rectangle(1, 2, [3])
         with self.assertRaises(TypeError):
-            self.rec = Rectangle(1, 2, {2:2})
+            self.rec = Rectangle(1, 2, {2: 2})
         with self.assertRaises(TypeError):
             self.rec = Rectangle(1, 2, (2,))
         """ Test bad y types """
@@ -84,7 +78,7 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             self.rec = Rectangle(1, 2, 3, [3])
         with self.assertRaises(TypeError):
-            self.rec = Rectangle(1, 2, 3, {2:2})
+            self.rec = Rectangle(1, 2, 3, {2: 2})
         with self.assertRaises(TypeError):
             self.rec = Rectangle(1, 1, 1, (2,))
 
@@ -102,9 +96,19 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.rec = Rectangle(1, 2, 2, -3)
 
+    def test_etc(self):
+        """ Test missing arguments """
+        with self.assertRaises(TypeError):
+            self.rec = Rectangle(1)
+        with self.assertRaises(TypeError):
+            self.rec = Rectangle()
+        """ Test too many arguments """
+        with self.assertRaises(TypeError):
+            self.rec = Rectangle(1, 2, 3, 4, 5, 6)
+
     def test_area(self):
         """ Test the area method """
-        self.rec = Rectangle (4, 2)
+        self.rec = Rectangle(4, 2)
         self.assertEqual(self.rec.area(), 8)
         self.rec1 = Rectangle(8, 7, 0, 0, 12)
         self.assertEqual(self.rec1.area(), 56)
@@ -151,30 +155,30 @@ class TestRectangle(unittest.TestCase):
         """ Test update with a dictionary """
         self.rec = Rectangle(10, 10, 10, 10)
         self.assertEqual(self.rec.__str__(), "[Rectangle] (2) 10/10 - 10/10")
-        self.rec.update(id = 98)
+        self.rec.update(id=98)
         self.assertEqual(self.rec.__str__(), "[Rectangle] (98) 10/10 - 10/10")
-        self.rec.update(id = 98, width = 2)
+        self.rec.update(id=98, width=2)
         self.assertEqual(self.rec.__str__(), "[Rectangle] (98) 10/10 - 2/10")
-        self.rec.update(id = 98, width = 2, height = 3)
+        self.rec.update(id=98, width=2, height=3)
         self.assertEqual(self.rec.__str__(), "[Rectangle] (98) 10/10 - 2/3")
-        self.rec.update(id = 98, width = 2, height = 3, x = 4)
+        self.rec.update(id=98, width=2, height=3, x=4)
         self.assertEqual(self.rec.__str__(), "[Rectangle] (98) 4/10 - 2/3")
-        self.rec.update(id = 98, width = 2, height = 3, x = 4, y = 5)
+        self.rec.update(id=98, width=2, height=3, x=4, y=5)
         self.assertEqual(self.rec.__str__(), "[Rectangle] (98) 4/5 - 2/3")
         """ Test update with a non_existant field """
         with self.assertRaises(KeyError):
-            self.rec.update(chicken = 3)
+            self.rec.update(chicken=3)
         """ Test update with a bad value """
         with self.assertRaises(TypeError):
             self.rec.update('f')
         with self.assertRaises(TypeError):
-            self.rec.update(width = 'f')
+            self.rec.update(width='f')
 
     def test_dictionary(self):
         self.rec = Rectangle(10, 10, 10, 10, 10)
         rec_dict = self.rec.to_dictionary()
         self.assertEqual(rec_dict, {'x': 10, 'y': 10, 'id': 10,
-        'height': 10, 'width': 10})
+                                    'height': 10, 'width': 10})
         self.assertTrue(isinstance(rec_dict, dict))
         self.rec2 = Rectangle(1, 1)
         self.rec2.update(**rec_dict)
@@ -228,4 +232,4 @@ class TestRectangle(unittest.TestCase):
 
 
 if __name__ == '__name__':
-    unittest.main() 
+    unittest.main()
