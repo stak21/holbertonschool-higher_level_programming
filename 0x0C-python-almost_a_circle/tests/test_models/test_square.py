@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 from models.rectangle import Rectangle
 from models.base import Base
-from models.square import Square 
+from models.square import Square
 import unittest
 import io
 import sys
@@ -15,12 +15,15 @@ class TestSquare(unittest.TestCase):
     def test_parent(self):
         self.sq = Square(1)
         self.assertTrue(isinstance(self.sq, Rectangle))
+        self.assertTrue(issubclass(Square, Rectangle))
         self.assertEqual(self.sq.id, 1)
-    
+
     def test_init(self):
         """ test all values """
         self.sq = Square(1, 2, 3, 10)
         self.assertEqual(self.sq.width, 1)
+        self.assertEqual(self.sq.height, 1)
+        self.assertEqual(self.sq.size, 1)
         self.assertEqual(self.sq.x, 2)
         self.assertEqual(self.sq.y, 3)
         self.assertEqual(self.sq.id, 10)
@@ -31,11 +34,6 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(self.sq.y, 0)
         self.assertEqual(self.sq.id, 1)
 
-    def test_etc(self):
-        """ Test missing arguments """
-        with self.assertRaises(TypeError):
-            self.sq = Square()
-            
     def test_bad_types(self):
         """ Test bad size types """
         with self.assertRaises(TypeError):
@@ -45,7 +43,7 @@ class TestSquare(unittest.TestCase):
         with self.assertRaises(TypeError):
             self.sq = Square([3])
         with self.assertRaises(TypeError):
-            self.sq = Square({2:2})
+            self.sq = Square({2: 2})
         with self.assertRaises(TypeError):
             self.sq = Square((2,))
 
@@ -59,6 +57,14 @@ class TestSquare(unittest.TestCase):
         """ Test bad y values """
         with self.assertRaises(ValueError):
             self.sq = Square(1, 2, -3)
+
+    def test_etc(self):
+        """ Test missing arguments """
+        with self.assertRaises(TypeError):
+            self.sq = Square()
+        """ Too many arguments """
+        with self.assertRaises(TypeError):
+            self.sq = Square(1, 3, 5, 6, 3, 4, 4)
 
     def test_area(self):
         """ Test the area method """
@@ -107,22 +113,22 @@ class TestSquare(unittest.TestCase):
         """ Test update with a dictionary """
         self.sq = Square(10, 10, 10)
         self.assertEqual(self.sq.__str__(), "[Square] (2) 10/10 - 10")
-        self.sq.update(id = 98)
+        self.sq.update(id=98)
         self.assertEqual(self.sq.__str__(), "[Square] (98) 10/10 - 10")
-        self.sq.update(id = 98, size = 2)
+        self.sq.update(id=98, size=2)
         self.assertEqual(self.sq.__str__(), "[Square] (98) 10/10 - 2")
-        self.sq.update(id = 98, size = 2, x = 4)
+        self.sq.update(id=98, size=2, x=4)
         self.assertEqual(self.sq.__str__(), "[Square] (98) 4/10 - 2")
-        self.sq.update(id = 98, size = 2, x = 4, y = 5)
+        self.sq.update(id=98, size=2, x=4, y=5)
         self.assertEqual(self.sq.__str__(), "[Square] (98) 4/5 - 2")
         """ Test update with a non_existant field """
         with self.assertRaises(KeyError):
-            self.sq.update(chicken = 3)
+            self.sq.update(chicken=3)
         """ Test update with a bad value """
         with self.assertRaises(TypeError):
             self.sq.update('f')
         with self.assertRaises(TypeError):
-            self.sq.update(size = 'f')
+            self.sq.update(size='f')
 
     def test_dictionary(self):
         self.sq = Square(10, 10, 10, 10)
@@ -154,4 +160,4 @@ class TestSquare(unittest.TestCase):
             self.assertEqual(obj1.__dict__, obj2.__dict__)
 
 if __name__ == '__name__':
-    unittest.main() 
+    unittest.main()
