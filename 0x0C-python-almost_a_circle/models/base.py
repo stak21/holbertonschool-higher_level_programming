@@ -18,6 +18,7 @@ class Base:
         if self.id is None:
             Base.__nb_objects += 1
             self.id = self.__nb_objects
+
     @classmethod
     def load_from_file(cls):
         """ Retrieve the json formatted dictionary from a file and recreate it
@@ -33,9 +34,9 @@ class Base:
     def save_to_file(cls, list_objs):
         """ Given a list of instances of a class, serialize each instance and
         save it to a file """
-        filename = cls.class_name + ".json"
+        filename = "{}.json".format(cls.__name__)
 
-        with open(filename, "w", encoding = "utf-8") as f:
+        with open(filename, "w", encoding="utf-8") as f:
             json_str = []
             for obj in list_objs:
                 json_str.append(cls.to_dictionary(obj))
@@ -44,10 +45,13 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        ret_cls = cls(1, 1)
+        if cls.__name__ == "Base":
+            return cls(dictionary["id"])
+        else:
+            ret_cls = cls(1, 1)
         ret_cls.update(**dictionary)
         return ret_cls
-                
+
     @classmethod
     def _reset(cls):
         """ testing purposes only """
@@ -75,4 +79,3 @@ class Base:
             raise ValueError("{} must be >= 0".format(name))
         elif value < 0:
             raise ValueError("{} must be > 0".format(name))
-
