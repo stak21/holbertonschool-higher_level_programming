@@ -173,6 +173,10 @@ class TestRectangle(unittest.TestCase):
             self.rec.update('f')
         with self.assertRaises(TypeError):
             self.rec.update(width='f')
+        """ Test with both *args and **kwargs """
+        self.rec1 = Rectangle(1, 2)
+        self.rec1.update(3, 3, id=9)
+        self.assertEqual(self.rec1.__str__(), "[Rectangle] (3) 0/0 - 3/2")
 
     def test_dictionary(self):
         self.rec = Rectangle(10, 10, 10, 10, 10)

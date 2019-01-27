@@ -129,6 +129,10 @@ class TestSquare(unittest.TestCase):
             self.sq.update('f')
         with self.assertRaises(TypeError):
             self.sq.update(size='f')
+        """ Test with both *args and **kwargs """
+        self.sq = Square(1, 2)
+        self.sq.update(3, 3, id=9)
+        self.assertEqual(self.sq.__str__(), "[Square] (3) 2/0 - 3")
 
     def test_dictionary(self):
         self.sq = Square(10, 10, 10, 10)
