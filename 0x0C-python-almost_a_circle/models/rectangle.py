@@ -5,7 +5,7 @@ from models.base import Base
 
 class Rectangle(Base):
     """ Instantiate width, height, x=0, y=0, id=None with getters/setters """
-    class_name = "Rectangle"
+
     def __init__(self, width, height, x=0, y=0, id=None):
         self.width = width
         self.height = height
@@ -78,8 +78,8 @@ class Rectangle(Base):
         fields = ['id', '_Rectangle__width', '_Rectangle__height',
                   '_Rectangle__x', '_Rectangle__y']
         dic_fields = {
-                      'id': 'id', 'width': "_Rectangle__width", 
-                      "height": '_Rectangle__height', "x": '_Rectangle__x', 
+                      'id': 'id', 'width': "_Rectangle__width",
+                      "height": '_Rectangle__height', "x": '_Rectangle__x',
                       'y': '_Rectangle__y'
                       }
         for field, arg in zip(fields, args):
@@ -96,11 +96,11 @@ class Rectangle(Base):
             self.__dict__[dic_fields[key]] = value
 
     def to_dictionary(self):
-       ret_dict = {}
-       ret_dict['id'] = self.id
-       ret_dict['x'] = self.x
-       ret_dict['y'] = self.y
-       ret_dict['width'] = self.width
-       ret_dict['height'] = self.height
-       
-       return ret_dict
+        ret_dict = {}
+        ret_dict['id'] = self.id
+        ret_dict['x'] = self.x
+        ret_dict['y'] = self.y
+        ret_dict['width'] = self.width
+        ret_dict['height'] = self.height
+
+    return ret_dict
