@@ -6,14 +6,13 @@ from models.rectangle import Rectangle
 
 class Square(Rectangle):
     """ Class: Square of Rectangle """
-    class_name = "Square"
     def __init__(self, size, x=0, y=0, id=None):
         """ Instantiate size, x, y, id """
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
         return "[Square] ({}) {:d}/{:d} - {:d}".format(self.id, self.x, self.y,
-        self.width)
+                                                       self.width)
 
     @property
     def size(self):
@@ -30,8 +29,8 @@ class Square(Rectangle):
         """ Updates the square fields """
         fields = ['id', '_Rectangle__width', '_Rectangle__x', '_Rectangle__y']
         dic_fields = {
-                      'id': 'id', 'width': "_Rectangle__width", 
-                      "height": '_Rectangle__height', "x": '_Rectangle__x', 
+                      'id': 'id', 'width': "_Rectangle__width",
+                      "height": '_Rectangle__height', "x": '_Rectangle__x',
                       'y': '_Rectangle__y'
                       }
         """ args iteration """
@@ -56,10 +55,10 @@ class Square(Rectangle):
                 self.__dict__[dic_fields[key]] = value
 
     def to_dictionary(self):
-       ret_dict = {}
-       ret_dict['id'] = self.id
-       ret_dict['x'] = self.x
-       ret_dict['y'] = self.y
-       ret_dict['size'] = self.size
-       
-       return ret_dict
+        ret_dict = {}
+        ret_dict['id'] = self.id
+        ret_dict['x'] = self.x
+        ret_dict['y'] = self.y
+        ret_dict['size'] = self.size
+
+        return ret_dict
