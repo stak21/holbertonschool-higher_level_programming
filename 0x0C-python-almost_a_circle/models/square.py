@@ -34,25 +34,27 @@ class Square(Rectangle):
                       'y': '_Rectangle__y'
                       }
         """ args iteration """
-        for field, arg in zip(fields, args):
-            eq = False
-            if field == "x" or field == "y":
-                eq = True
-            super().integer_validator(field, arg, eq)
-            if field is "_Rectangle__width":
+        if args:
+            for field, arg in zip(fields, args):
+                eq = False
+                if field == "x" or field == "y":
+                    eq = True
+                super().integer_validator(field, arg, eq)
+                if field is "_Rectangle__width":
+                    self.__dict__[field] = arg
                 self.__dict__[field] = arg
-            self.__dict__[field] = arg
-        """ kwargs iteration """
-        for key, value in kwargs.items():
-            eq = False
-            if key == "x" or key == "y":
-                eq = True
-            super().integer_validator(key, value, eq)
-            if key in "size height" or key is "width":
-                self.__dict__["_Rectangle__width"] = value
-                self.__dict__["_Rectangle__height"] = value
-            else:
-                self.__dict__[dic_fields[key]] = value
+        else:
+            """ kwargs iteration """
+            for key, value in kwargs.items():
+                eq = False
+                if key == "x" or key == "y":
+                    eq = True
+                super().integer_validator(key, value, eq)
+                if key in "size height" or key is "width":
+                    self.__dict__["_Rectangle__width"] = value
+                    self.__dict__["_Rectangle__height"] = value
+                else:
+                    self.__dict__[dic_fields[key]] = value
 
     def to_dictionary(self):
         ret_dict = {}

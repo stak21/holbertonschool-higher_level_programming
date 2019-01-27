@@ -82,18 +82,20 @@ class Rectangle(Base):
                       "height": '_Rectangle__height', "x": '_Rectangle__x',
                       'y': '_Rectangle__y'
                       }
-        for field, arg in zip(fields, args):
-            eq = False
-            if field == "x" or field == "y":
-                eq = True
-            super().integer_validator(field, arg, eq)
-            self.__dict__[field] = arg
-        for key, value in kwargs.items():
-            eq = False
-            if key == "x" or key == "y":
-                eq = True
-            super().integer_validator(key, value, eq)
-            self.__dict__[dic_fields[key]] = value
+        if args:
+            for field, arg in zip(fields, args):
+                eq = False
+                if field == "x" or field == "y":
+                    eq = True
+                super().integer_validator(field, arg, eq)
+                self.__dict__[field] = arg
+        else:
+            for key, value in kwargs.items():
+                eq = False
+                if key == "x" or key == "y":
+                    eq = True
+                super().integer_validator(key, value, eq)
+                self.__dict__[dic_fields[key]] = value
 
     def to_dictionary(self):
         ret_dict = {}
@@ -103,4 +105,4 @@ class Rectangle(Base):
         ret_dict['width'] = self.width
         ret_dict['height'] = self.height
 
-    return ret_dict
+        return ret_dict
