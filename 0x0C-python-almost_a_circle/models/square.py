@@ -11,6 +11,7 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
+        """ String representation of the class """
         return "[Square] ({}) {:d}/{:d} - {:d}".format(self.id, self.x, self.y,
                                                        self.width)
 
@@ -57,6 +58,7 @@ class Square(Rectangle):
                     self.__dict__[dic_fields[key]] = value
 
     def to_dictionary(self):
+        """ Returns the dictionary representation of the instance """
         ret_dict = {}
         ret_dict['id'] = self.id
         ret_dict['x'] = self.x

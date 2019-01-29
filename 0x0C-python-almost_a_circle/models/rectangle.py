@@ -7,6 +7,7 @@ class Rectangle(Base):
     """ Instantiate width, height, x=0, y=0, id=None with getters/setters """
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        """ instantiate Rectangle object """
         self.width = width
         self.height = height
         self.x = x
@@ -98,6 +99,7 @@ class Rectangle(Base):
                 self.__dict__[dic_fields[key]] = value
 
     def to_dictionary(self):
+        """ Returns a dictionary representation of the object """
         ret_dict = {}
         ret_dict['id'] = self.id
         ret_dict['x'] = self.x

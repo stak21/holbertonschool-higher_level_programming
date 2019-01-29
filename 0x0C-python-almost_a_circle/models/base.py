@@ -45,6 +45,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        """ Creates an instance of a class from a dictionary """
         if cls.__name__ == "Base":
             return cls(dictionary["id"])
         else:
@@ -59,12 +60,14 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """ returns a json string from a list of dictionaries """
         if list_dictionaries is None:
             return "[]"
         return json.dumps(list_dictionaries)
 
     @staticmethod
     def from_json_string(json_string):
+        """ Returns a object from a json string """
         if json_string is None or json_string == []:
             return []
         return json.loads(json_string)
