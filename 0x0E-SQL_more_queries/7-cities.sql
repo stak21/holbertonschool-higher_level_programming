@@ -1,0 +1,8 @@
+-- Create the DB hbtn_0d_usa and a table cities
+-- Description: id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, state_id INT NOT
+-- NULL FOREIGN KEY REFERENCES id of states table, name NOT NULL VARCHAR(256)
+-- IT SHOULD NOT FAIL
+CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
+USE hbtn_0d_usa;
+CREATE TABLE IF NOT EXISTS cities(id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, state_id INT NOT NULL, FOREIGN KEY (state_id) REFERENCES states(id), name VARCHAR(256) NOT NULL);
+
