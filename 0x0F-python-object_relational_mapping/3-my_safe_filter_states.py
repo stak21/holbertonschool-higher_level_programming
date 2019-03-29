@@ -7,8 +7,13 @@ if __name__ == "__main__":
     if len(sys.argv) == 5:
         search = sys.argv[4]
         cmd = "SELECT * FROM states WHERE name LIKE %s ORDER BY id ASC;"
-        conn = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
-                passwd=sys.argv[2], db=sys.argv[3], charset="utf8")
+        conn = MySQLdb.connect(
+                host="localhost",
+                port=3306,
+                user=sys.argv[1],
+                passwd=sys.argv[2],
+                db=sys.argv[3],
+                charset="utf8")
         cur = conn.cursor()
         cur.execute(cmd, (search,))
         query_rows = cur.fetchall()
@@ -18,4 +23,3 @@ if __name__ == "__main__":
         conn.close()
     else:
         print("Usage: USER PASSWORD DB_NAME SEARCH")
-
