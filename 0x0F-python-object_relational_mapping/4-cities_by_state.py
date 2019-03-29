@@ -8,8 +8,13 @@ if __name__ == "__main__":
         cmd = "SELECT cities.id, cities.name, states.name\
                 FROM states \
                 JOIN cities on cities.state_id = states.id;"
-        conn = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
-                passwd=sys.argv[2], db=sys.argv[3], charset="utf8")
+        conn = MySQLdb.connect(
+                host="localhost",
+                port=3306,
+                user=sys.argv[1],
+                passwd=sys.argv[2],
+                db=sys.argv[3],
+                charset="utf8")
         cur = conn.cursor()
         cur.execute(cmd)
         query_rows = cur.fetchall()
