@@ -16,7 +16,7 @@ if __name__ == "__main__":
         cur.execute(
                 "SELECT *\
                         FROM states\
-                        WHERE name\
+                        WHERE states.name\
                         LIKE 'N%'\
                         ORDER BY states.id ASC")
         query_rows = cur.fetchall()
