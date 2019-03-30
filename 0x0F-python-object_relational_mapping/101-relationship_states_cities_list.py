@@ -18,16 +18,12 @@ if __name__ == "__main__":
 
         session = Session()
         for states, cities in session.query(State, City).\
-        filter(State.id == City.id).\
-        order_by(State.id, City.id).\
-        all():
+                filter(State.id == City.id).\
+                order_by(State.id, City.id).\
+                all():
             print("{}: {}".format(states.id, states.name))
             for city in states.cities:
                 print("    {}: {}".format(city.id, city.name))
-                
-                
-                
-            
         session.close()
 
     else:
