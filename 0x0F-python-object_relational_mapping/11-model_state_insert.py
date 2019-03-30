@@ -18,10 +18,10 @@ if __name__ == "__main__":
         new_state = State(name="Louisiana")
         session.add(new_state)
         session.commit()
-        for state in session.query(State).\
-                order_by(State.id).\
-                all():
-                    print("{}: {}".format(state.id, state.name))
+        state = session.query(State).\
+                filter(State.name == "Louisiana").\
+                first()
+        print(state.id)
         session.close()
     else:
         print("my sql username pass db ")
