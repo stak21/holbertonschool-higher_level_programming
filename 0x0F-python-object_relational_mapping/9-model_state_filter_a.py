@@ -17,9 +17,9 @@ if __name__ == "__main__":
         session = Session()
         try:
             for state in session.query(State).\
-                    filter(State.name.like('%a%')).\
+                    filter(State.name.ilike('%a%')).\
                     all():
-                    print(state.name)
+                        print("{}: {}".format(state.id, state.name))
         except:
             print("Nothing")
         session.close()
