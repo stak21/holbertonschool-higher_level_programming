@@ -21,10 +21,11 @@ if __name__ == "__main__":
         cur = conn.cursor()
         cur.execute(cmd, (state_name,))
         query_rows = cur.fetchall()
-        for row in query_rows[0:-1]:
-            print(row[0], end=', ')
-        print(query_rows[-1][0])
+        if (query_rows):
+            for row in query_rows[0:-1]:
+                print(row[0], end=', ')
+            print(query_rows[-1][0])
         cur.close()
         conn.close()
     else:
-        print("Usage: USER, PASSWD, DB_NAME")
+        print("Usage: USER, PASSWD, DB_NAME Search")
