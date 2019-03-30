@@ -24,7 +24,8 @@ if __name__ == "__main__":
         if (query_rows):
             for row in query_rows[0:-1]:
                 print(row[0], end=', ')
-            print(query_rows[-1][0])
+            print(query_rows[-1][0], end = "")
+        print("")
         cur.close()
         conn.close()
     else:
