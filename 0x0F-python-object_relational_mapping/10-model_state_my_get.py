@@ -19,8 +19,7 @@ if __name__ == "__main__":
         try:
             state = session.query(State).\
                     filter(State.name == usr_match).\
-                    order_by(State.id).\
-                    all()
+                    one()
             if state:
                 print(state.id)
             else:
