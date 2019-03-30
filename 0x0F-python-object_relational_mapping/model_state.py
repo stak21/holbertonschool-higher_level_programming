@@ -1,6 +1,6 @@
 #!/usr/bin/python3.4
 """ Class: State - Base Model of a state """
-from sqlalchemy import Column, Integer, String, create_engine
+from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
