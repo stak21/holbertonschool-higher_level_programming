@@ -8,7 +8,7 @@ if __name__ == "__main__":
         state_name = sys.argv[4]
         cmd = "SELECT cities.name\
                 FROM states \
-                JOIN cities on cities.state_id = states.id\
+                JOIN cities ON cities.state_id = states.id\
                 WHERE states.name = %s\
                 ORDER BY cities.id ASC;"
         conn = MySQLdb.connect(
