@@ -17,11 +17,14 @@ if __name__ == "__main__":
 
         session = Session()
         try:
-            for state in session.query(State).\
+            state = session.query(State).\
                     filter(State.name == usr_match).\
                     order_by(State.id).\
-                    all():
-                    print(state.name)
+                    all()
+            if state:
+                print(state.id)
+            else:
+                print("Not found")
         except:
             print("Not found")
         session.close()
