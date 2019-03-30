@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ Script: lists all city objects """
-from model_state import State, Base
-from model_city import City, Base
+from model_state import State
+from model_city import City
 from sqlalchemy import Column, Integer, String, create_engine
 from sqlalchemy.orm import sessionmaker
 import sys
@@ -16,11 +16,12 @@ if __name__ == "__main__":
         Session = sessionmaker(bind=engine)
 
         session = Session()
-        city = session.query(City).\
+        for cities in session.query(City).\
                 order_by(City.id).\
-                all()
-        author =  city.states
-        print("{}: ({}) {}".format(author.name, city.id, city.name))
+                all():
+                    print("{}: ({}) {}".format(
+                        cities.state.name, cities.id, cities.name))
+
         session.close()
     else:
         print("my sql username pass db ")
