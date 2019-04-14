@@ -27,3 +27,5 @@ def find_peak(list_of_integers):
     return find_peak(li[:middle + 1])
     """ right side """
     return find_peak(li[middle:])
+
+write
