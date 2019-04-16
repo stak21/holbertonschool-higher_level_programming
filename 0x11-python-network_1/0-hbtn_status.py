@@ -9,6 +9,6 @@ if __name__ == "__main__":
         html = response.read()
 
     print("Body response:\n\
-    - type: {}\n\
-    - content: {}\n\
-    - utf8 content: {}".format(type(html), html, html.decode("utf-8")))
+\t- type: {}\n\
+\t- content: {}\n\
+\t- utf8 content: {}".format(type(html), html, html.decode("utf-8")))
