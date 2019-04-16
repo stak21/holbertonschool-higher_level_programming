@@ -6,8 +6,8 @@ import requests
 import sys
 
 if __name__ == "__main__":
-    r =\
-    requests.get("https://swapi.co/api/people/?search={}".format(sys.argv[1]))
+    r = requests.get(
+            "https://swapi.co/api/people/?search={}".format(sys.argv[1]))
     dic = r.json()
     print("Number of results: {}".format(dic['count']))
     for res in dic['results']:
