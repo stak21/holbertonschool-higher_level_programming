@@ -10,6 +10,8 @@ if __name__ == "__main__":
     params = {'q': ""}
     if len(sys.argv) == 2 and sys.argv[1]:
         params['q'] = sys.argv[1]
+    if not params['q']:
+        print("No result")
     r = requests.post('http://0.0.0.0:5000/search_user', params)
     try:
         if not r.json():
