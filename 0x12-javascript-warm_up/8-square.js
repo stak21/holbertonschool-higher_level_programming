@@ -1,5 +1,5 @@
 #!/usr/bin/node
-if (process.argv.length == 2) {
+if (process.argv.length === 2) {
   console.log('Missing size');
   process.exit();
 }
