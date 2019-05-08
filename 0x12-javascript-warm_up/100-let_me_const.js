@@ -1,4 +1,4 @@
 #!/usr/bin/node
 if (myVar) {
-  const myVar = 333;
+  myVar = 333;
 }
