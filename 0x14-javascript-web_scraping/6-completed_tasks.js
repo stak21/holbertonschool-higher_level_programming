@@ -9,16 +9,20 @@ if (process.argv.length >= 3) {
     if (error) {
       console.log(error);
     } else {
-      let tasks = JSON.parse(body);
-      tasks.forEach(task => {
-        if (users[task['userId']] === undefined) {
-          users[task['userId']] = 0;
-        }
-        if (task['completed'] === true) {
-          users[task['userId']] += 1;
-        }
-      });
-      console.log(users);
+      try {
+        let tasks = JSON.parse(body);
+        tasks.forEach(task => {
+          if (task['completed'] === true) {
+            if (users[task['userId']] === undefined) {
+              users[task['userId']] = 0;
+            }
+            users[task['userId']] += 1;
+          }
+        });
+        console.log(users);
+      } catch(error) {
+        throw error
+      }
     }
   });
 }
