@@ -20,8 +20,8 @@ if (process.argv.length >= 3) {
           }
         });
         console.log(users);
-      } catch(error) {
-        throw error
+      } catch (error) {
+        throw error;
       }
     }
   });
