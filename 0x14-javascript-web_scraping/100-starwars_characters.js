@@ -7,16 +7,16 @@ if (process.argv.length >= 3) {
     if (error) {
       console.log(error);
     } else {
-      characters = JSON.parse(body)['characters']
-      characters.forEach( url => {
+      let characters = JSON.parse(body)['characters'];
+      characters.forEach(url => {
         request(url, function (error, response, body) {
           if (error) {
             console.log(error);
           } else {
-            console.log(JSON.parse(body)['name'])
+            console.log(JSON.parse(body)['name']);
           }
-        })
-      })
+        });
+      });
     }
   });
 }
