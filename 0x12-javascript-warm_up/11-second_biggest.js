@@ -14,5 +14,10 @@ for (let i = 3; i < process.argv.length; i += 1) {
     low = max;
     max = li[i];
   }
+  if (i == process.argv.length) {
+    if (low < li[i] < max) { 
+      low = li[i];
+    }
+  }
 }
 console.log(low);
