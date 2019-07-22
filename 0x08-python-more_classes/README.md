@@ -59,16 +59,16 @@ This project in the low_level_programming series is about:
 ---
 File|Task
 ---|---
-0-rectangle.py | Class: define a rectangle
-1-rectangle.py | Class: Build upon the previous project- attributes (height, width)
-2-rectangle.py | Class: build upon previous project: methods(area, perimeter)
-3-rectangle.py | Class: build upon the previous project: property(height, width)
-4-rectangle.py | Class: build upon the previous project: method(repr)
-5-rectangle.py | Class: build upon the previous project: method(del)
-6-rectangle.py | Class: build upon the previous project: method(number_of_instances)
-7-rectangle.py | Class: build upon the previous project: method(print_symbol)
-8-rectangle.py | Class: build upon the previous project: static(bigger_or_equal)
-9-rectangle.py | Class: build upon the previous project: method(square)
+[0-rectangle.py ](./0-rectangle.py ) | Class: define a rectangle
+[1-rectangle.py ](./1-rectangle.py ) | Class: Build upon the previous project- attributes (height, width)
+[2-rectangle.py ](./2-rectangle.py ) | Class: build upon previous project: methods(area, perimeter)
+[3-rectangle.py ](./3-rectangle.py ) | Class: build upon the previous project: property(height, width)
+[4-rectangle.py ](./4-rectangle.py ) | Class: build upon the previous project: method(repr)
+[5-rectangle.py ](./5-rectangle.py ) | Class: build upon the previous project: method(del)
+[6-rectangle.py ](./6-rectangle.py ) | Class: build upon the previous project: method(number_of_instances)
+[7-rectangle.py ](./7-rectangle.py ) | Class: build upon the previous project: method(print_symbol)
+[8-rectangle.py ](./8-rectangle.py ) | Class: build upon the previous project: static(bigger_or_equal)
+[9-rectangle.py ](./9-rectangle.py ) | Class: build upon the previous project: method(square)
 
 ## Author
  Shoji Takashima

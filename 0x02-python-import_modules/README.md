@@ -21,16 +21,16 @@ This project in the low_level_programming series is about:
 ---
 File|Task
 ---|---
-0-add.py | A Pyscript that imports a function and prints the result
-1-calculation.py | A Pyscript that imports a function and prints the result
-2-args.py | A Pyscript that prints the number of arguments and the arguments
-3-infinite_add.py | A Pyscript that prints the result of the addition of all arguments
-4-hidden_discovery.py | A Pyscript that prints all the names defined by the compiled module hidden_4.pyc
-5-variable_load.py | A Pyscript that imports the variable a from a file and prints its value
-100-my_calculator.py | A Pyscript that imports all functions from a file and handles basics operations
-101-easy_print.py | A Pyscript that prints #pythoniscool to the stdout
-102-magic_calculation.py | A Function that does exactly what the Python bytecode instructs
-103-fast_alphabet.py | A Pyscript that prints the alphabet in uppercase
+[0-add.py ](./0-add.py ) | A Pyscript that imports a function and prints the result
+[1-calculation.py ](./1-calculation.py ) | A Pyscript that imports a function and prints the result
+[2-args.py ](./2-args.py ) | A Pyscript that prints the number of arguments and the arguments
+[3-infinite_add.py ](./3-infinite_add.py ) | A Pyscript that prints the result of the addition of all arguments
+[4-hidden_discovery.py ](./4-hidden_discovery.py ) | A Pyscript that prints all the names defined by the compiled module hidden_4.pyc
+[5-variable_load.py ](./5-variable_load.py ) | A Pyscript that imports the variable a from a file and prints its value
+[100-my_calculator.py ](./100-my_calculator.py ) | A Pyscript that imports all functions from a file and handles basics operations
+[101-easy_print.py ](./101-easy_print.py ) | A Pyscript that prints #pythoniscool to the stdout
+[102-magic_calculation.py ](./102-magic_calculation.py ) | A Function that does exactly what the Python bytecode instructs
+[103-fast_alphabet.py ](./103-fast_alphabet.py ) | A Pyscript that prints the alphabet in uppercase
 
 ## Author
  Shoji Takashima
