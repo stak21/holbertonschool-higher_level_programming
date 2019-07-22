@@ -4,31 +4,31 @@
 
 This project in the low_level_programming series is about:
 
-*Why Python programming is awesome (don’t forget to tweet today, with the hashtag #pythoniscool :))
+* Why Python programming is awesome (don’t forget to tweet today, with the hashtag #pythoniscool :))
 
-*How to open a file
+* How to open a file
 
-*How to write text in a file
+* How to write text in a file
 
-*How to read the full content of a file
+* How to read the full content of a file
 
-*How to read a file line by line
+* How to read a file line by line
 
-*How to move the cursor in a file
+* How to move the cursor in a file
 
-*How to make sure a file is closed after using it
+* How to make sure a file is closed after using it
 
-*What is and how to use the with statement
+* What is and how to use the with statement
 
-*What is JSON
+* What is JSON
 
-*What is serialization
+* What is serialization
 
-*What is deserialization
+* What is deserialization
 
-*How to convert a Python data structure to a JSON string
+* How to convert a Python data structure to a JSON string
 
-*How to convert a JSON string to a Python data structure
+* How to convert a JSON string to a Python data structure
 
 ---
 File|Task

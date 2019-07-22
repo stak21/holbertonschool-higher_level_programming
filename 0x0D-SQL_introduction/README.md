@@ -4,27 +4,27 @@
 
 This project in the low_level_programming series is about:
 
-*What’s a database
+* What’s a database
 
-*What’s a relational database
+* What’s a relational database
 
-*What does SQL stand for
+* What does SQL stand for
 
-*What’s MySQL
+* What’s MySQL
 
-*How to create a database in MySQL
+* How to create a database in MySQL
 
-*What does DDL and DML stand for
+* What does DDL and DML stand for
 
-*How to CREATE or ALTER a table
+* How to CREATE or ALTER a table
 
-*How to SELECT data from a table
+* How to SELECT data from a table
 
-*How to INSERT, UPDATE or DELETE data
+* How to INSERT, UPDATE or DELETE data
 
-*What are subqueries
+* What are subqueries
 
-*How to use MySQL functions
+* How to use MySQL functions
 
 ---
 File|Task

@@ -4,17 +4,17 @@
 
 This project in the low_level_programming series is about:
 
-*Why Python programming is awesome (don’t forget to tweet today, with the hashtag #pythoniscool :))
+* Why Python programming is awesome (don’t forget to tweet today, with the hashtag #pythoniscool :))
 
-*How to connect to a MySQL database from a Python script
+* How to connect to a MySQL database from a Python script
 
-*How to SELECT rows in a MySQL table from a Python script
+* How to SELECT rows in a MySQL table from a Python script
 
-*How to INSERT rows in a MySQL table from a Python script
+* How to INSERT rows in a MySQL table from a Python script
 
-*What ORM means
+* What ORM means
 
-*How to map a Python Class to a MySQL table
+* How to map a Python Class to a MySQL table
 
 ---
 File|Task

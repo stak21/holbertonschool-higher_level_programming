@@ -4,15 +4,15 @@
 
 This project in the low_level_programming series is about:
 
-*General
+* General
 
-*Why Javascript programming is amazing (don’t forget to tweet today, with the hashtag #javascriptisamazing :))
+* Why Javascript programming is amazing (don’t forget to tweet today, with the hashtag #javascriptisamazing :))
 
-*How to manipulate JSON data
+* How to manipulate JSON data
 
-*How to use request and fetch API
+* How to use request and fetch API
 
-*How to read and write a file using fs module
+* How to read and write a file using fs module
 
 ---
 File|Task

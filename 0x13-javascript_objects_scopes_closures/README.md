@@ -4,23 +4,23 @@
 
 This project in the low_level_programming series is about:
 
-*General
+* General
 
-*Why Javascript programming is amazing (don’t forget to tweet today, with the hashtag #javascriptisamazing :))
+* Why Javascript programming is amazing (don’t forget to tweet today, with the hashtag #javascriptisamazing :))
 
-*How to create an object in Javascript
+* How to create an object in Javascript
 
-*What this means
+* What this means
 
-*What undefined means
+* What undefined means
 
-*Why the variable type and scope is important
+* Why the variable type and scope is important
 
-*What is a closure
+* What is a closure
 
-*What is a prototype
+* What is a prototype
 
-*How to inherit an object from another
+* How to inherit an object from another
 
 ---
 File|Task

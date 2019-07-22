@@ -4,21 +4,21 @@
 
 This project in the low_level_programming series is about:
 
-*Why Python programming is awesome (don’t forget to tweet today, with the hashtag #pythoniscool :))
+* Why Python programming is awesome (don’t forget to tweet today, with the hashtag #pythoniscool :))
 
-*What’s the difference between errors and exceptions
+* What’s the difference between errors and exceptions
 
-*What are exceptions and how to use them
+* What are exceptions and how to use them
 
-*When do we need to use exceptions
+* When do we need to use exceptions
 
-*How to correctly handle an exception
+* How to correctly handle an exception
 
-*What’s the purpose of catching exceptions
+* What’s the purpose of catching exceptions
 
-*How to raise a builtin exception
+* How to raise a builtin exception
 
-*When do we need to implement a clean-up action after an exception
+* When do we need to implement a clean-up action after an exception
 
 ---
 File|Task
