@@ -4,25 +4,25 @@
 
 This project in the low_level_programming series is about:
 
-*Why Python programming is awesome (don’t forget to tweet today, with the hashtag #pythoniscool :))
+* Why Python programming is awesome (don’t forget to tweet today, with the hashtag #pythoniscool :))
 
-*Who created Python
+* Who created Python
 
-*Who is Guido van Rossum
+* Who is Guido van Rossum
 
-*Where does the name ‘Python’ come from
+* Where does the name ‘Python’ come from
 
-*What is the Zen of Python
+* What is the Zen of Python
 
-*How to use the Python interpreter
+* How to use the Python interpreter
 
-*How to print text and variables using print
+* How to print text and variables using print
 
-*How to use strings
+* How to use strings
 
-*What are indexing and slicing in Python
+* What are indexing and slicing in Python
 
-*What is the official Holberton Python coding style and how to check your code with PEP 8
+* What is the official Holberton Python coding style and how to check your code with PEP 8
 
 ---
 File|Task
